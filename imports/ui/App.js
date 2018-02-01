@@ -24,7 +24,7 @@ export default class App extends Component {
                     <h1>literify</h1>
                 </header>
 
-                <ul>
+                <ul className="sidewalk">
                     {this.renderBlogs()}
                 </ul>
             </div>

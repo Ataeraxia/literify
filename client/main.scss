@@ -1,0 +1,53 @@
+$blues: rgb(53, 53, 194);
+$scorch: rgb(58, 18, 0);
+$text: rgb(161, 51, 0);
+$darktext: rgb(75, 24, 0);
+$flicker: rgb(185, 94, 51);
+$char: rgb(131, 59, 26);
+
+body {
+    background-color: $scorch;
+    color: $text;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: $flicker;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    padding: 0.6rem 1rem;
+    margin: 0;
+    // background-color: purple;
+    font-weight: 300;
+    font-style: none;
+    font-size: 2rem;
+    color: $darktext;
+}
+
+.sidewalk {
+    display: flex;
+    flex-direction: column;
+    // background-color: blue;
+    margin: 2rem 0;
+    padding: 1rem;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.tile {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    background-color: $char;
+    list-style: none;
+    text-align: center;
+    color: $darktext;
+}
