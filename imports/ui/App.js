@@ -12,9 +12,9 @@ export default class App extends Component {
     }
 
     renderBlogs() {
-        return this.getBlogs().map((blog) => {
+        return this.getBlogs().map((blog) => (
             <Blog key={blog._id} blog={blog} />
-        });
+        ));
     }
 
     render() {
