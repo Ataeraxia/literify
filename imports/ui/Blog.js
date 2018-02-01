@@ -10,7 +10,7 @@ export default class Blog extends Component {
                     </h2>
 
                     <p>
-                        {this.props.blog.body}
+                        {this.props.blog.body.substring(0,250)}...
                     </p>
                 </div>
             </li>
