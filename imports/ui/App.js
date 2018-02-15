@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Blog from "./Blog.js";
 import { allstar } from "./allstar.js";
+import { URL } from "url";
 
 export default class App extends Component {
     getBlogs() {
@@ -19,6 +20,14 @@ export default class App extends Component {
         ));
     }
 
+    renderSidewalk() {
+        return (
+            <ul className="sidewalk">
+                {this.renderBlogs()}
+            </ul> 
+        );
+    }
+
     render() {
         return (
             <div className="container">
@@ -26,10 +35,12 @@ export default class App extends Component {
                     <h1>literify</h1>
                 </header>
 
-                <ul className="sidewalk">
-                    {this.renderBlogs()}
-                </ul>
+                
             </div>
         );
     }
 }
+
+/* <ul className="sidewalk">
+                    {this.renderBlogs()}
+                </ul> */
