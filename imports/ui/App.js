@@ -34,11 +34,11 @@ export default class App extends Component {
                 <header>
                     <h1>literify</h1>
                 </header>
-
-                
+                {this.renderSidewalk()}
             </div>
         );
     }
+
 }
 
 /* <ul className="sidewalk">
