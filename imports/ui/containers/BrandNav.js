@@ -6,7 +6,6 @@ export default class BrandNav extends Component {
             <div className="container">
                 <header>
                     <h1>literify</h1>
-                    def good stuff
                 </header>
             </div>
         );
