@@ -124,6 +124,17 @@ h1 {
 .tile p {
     // background-color: $scorch;
     margin: 1rem 8rem;
+    margin-bottom: 2rem;
     line-height: 2rem;
     font-size: 1.2rem;
+    word-wrap: break-word;
+}
+
+.tile button {
+    margin-bottom: 1rem;
+    background-color: rgb(110, 0, 0);
+    color: $flicker;
+    border: none;
+    padding: 0 0.8rem;
+    font-size: 2rem;
 }
