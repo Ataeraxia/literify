@@ -37,6 +37,55 @@ h1 {
     color: $darktext;
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    background-color: $char;
+    padding: 2rem 3rem;
+}
+
+.form-container input[type="text"] {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    background-color: $scorch;
+    border: none;
+    color: $flicker;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.form-container textarea {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    background-color: $scorch;
+    border: none;
+    color: $flicker;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.form-container input[type="submit"]{
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color: $flicker;
+    border: none;
+    color: $scorch;
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+}
+
 .sidewalk {
     display: flex;
     flex-direction: column;
