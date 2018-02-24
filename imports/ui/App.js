@@ -1,22 +1,16 @@
 import React, { Component } from "react";
+import { withTracker } from "meteor/react-meteor-data";
+
+import { Blogs } from "../api/blogs.js";
 
 import Blog from "./Blog.js";
-import { allstar } from "./allstar.js";
+import AddBlogForm from "./components/AddBlogForm.js";
 
-export default class App extends Component {
-    getBlogs() {
-        return [
-            {
-                _id: 0, title: 'This is the 0th blog post', body: allstar},
-            { _id: 1, title: 'This is the 1st blog post', body: allstar},
-            { _id: 2, title: 'This is the 2nd blog post', body: allstar}
-        ];
-    }
-
+class App extends Component {
     renderBlogs() {
-        return this.getBlogs().map((blog) => (
+        return this.props.blogs.map((blog) => (
             <Blog key={blog._id} blog={blog} />
-        ));
+        ))
     }
 
     render() {
@@ -26,6 +20,8 @@ export default class App extends Component {
                     <h1>literify</h1>
                 </header>
 
+                <AddBlogForm />
+
                 <ul className="sidewalk">
                     {this.renderBlogs()}
                 </ul>
@@ -33,3 +29,9 @@ export default class App extends Component {
         );
     }
 }
+
+export default withTracker(() => {
+    return {
+        blogs: Blogs.find({}, { sort: { createdAt: -1 }}).fetch(),
+    };
+})(App);
