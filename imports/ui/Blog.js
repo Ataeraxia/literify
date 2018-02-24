@@ -23,6 +23,10 @@ export default class Blog extends Component {
                         {this.props.blog.title}
                     </h2>
 
+                    <h4>
+                        {this.props.blog.createdAt.toDateString()}
+                    </h4>
+
                     <p>
                         {this.props.blog.body.substring(0,250)}{this.punctuation(this.props.blog.body)}
                     </p>
