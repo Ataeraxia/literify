@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FlowRouter } from "meteor/kadira:flow-router";
 
 import { Blogs } from "../api/blogs.js";
 
@@ -7,6 +8,7 @@ export default class Blog extends Component {
         super();
         this.setFullBlog = this.setFullBlog.bind(this);
         this.renderBlogBody = this.renderBlogBody.bind(this);
+        this.goToPage = this.goToPage.bind(this);
         this.state = {isFull: false};
     }
 
@@ -38,13 +40,17 @@ export default class Blog extends Component {
         }
     }
 
+    goToPage() {
+        FlowRouter.go('Show.Blog', { postId: this.props.blog._id});
+    }
+
     deleteBlog() {
         Blogs.remove(this.props.blog._id);
     }
 
     render() {
         return (
-            <li className="tile" onClick={this.setFullBlog}>
+            <li className="tile" onClick={this.goToPage}>
                 <div >
                     <div className="blog-head">
                         <h2>

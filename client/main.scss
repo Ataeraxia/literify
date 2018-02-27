@@ -5,6 +5,21 @@ $darktext: rgb(75, 24, 0);
 $flicker: rgb(185, 94, 51);
 $char: rgb(131, 59, 26);
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+header .navlink {
+    color: $darktext;
+    font-size: 1.3rem;
+    margin: 1rem 1rem;
+}
+
 body {
     background-color: $scorch;
     color: $text;

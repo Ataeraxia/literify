@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { FlowRouter } from "meteor/kadira:flow-router";
 
 import { Blogs } from "../../api/blogs.js";
 
@@ -20,6 +21,8 @@ export default class AddBlogForm extends Component {
         ReactDOM.findDOMNode(this.refs.titleTextInput).value = '';
 
         ReactDOM.findDOMNode(this.refs.bodyTextArea).value = '';
+
+        FlowRouter.go('Home');
     }
     render() {
         return (
